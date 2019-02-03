@@ -2,6 +2,23 @@ package com.gs.ilp.corejava.flowcontrol;
 
 import java.util.Scanner;
 
+/*
+ * Test Case 1
+Enter the size
+5
+enter the value at index 0
+23
+enter the value at index 1
+45
+enter the value at index 2
+32
+enter the value at index 3
+67
+enter the value at index 4
+12
+Max is 67
+*/
+
 public class FindMaxIn1DArray {
 	public static void main(String[] args) {
 
