@@ -3,8 +3,6 @@ package com.gs.ilp.corejava.collectionsFramework2.equalsandhashcode;
 public class Money {
 	int amount;
 	String currencyCode;
-	
-	
 
 	public Money() {
 		super();

@@ -20,19 +20,22 @@ public class WrongVoucher extends Money {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	@Override
-	public boolean equals(Object o) {
-		if (o == this)
+	public boolean equals(Object obj) {
+		if (this == obj)
 			return true;
-		if (!(o instanceof WrongVoucher))
+		if (!super.equals(obj))
 			return false;
-		WrongVoucher other = (WrongVoucher) o;
-		boolean currencyCodeEquals = (this.currencyCode == null && other.currencyCode == null)
-				|| (this.currencyCode != null && this.currencyCode.equals(other.currencyCode));
-		boolean storeEquals = (this.store == null && other.store == null)
-				|| (this.store != null && this.store.equals(other.store));
-		return this.amount == other.amount && currencyCodeEquals && storeEquals;
+		if (!(obj instanceof WrongVoucher))
+			return false;
+		WrongVoucher other = (WrongVoucher) obj;
+		if (store == null) {
+			if (other.store != null)
+				return false;
+		} else if (!store.equals(other.store))
+			return false;
+		return true;
 	}
+
 
 }
