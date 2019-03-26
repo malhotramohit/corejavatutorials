@@ -15,23 +15,49 @@ public class Money {
 		this.currencyCode = currencyCode;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + amount;
+		result = prime * result + ((currencyCode == null) ? 0 : currencyCode.hashCode());
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		Money other = (Money) obj;
-		if (amount != other.amount)
+		if (amount != other.amount) {
 			return false;
+		}
 		if (currencyCode == null) {
-			if (other.currencyCode != null)
+			if (other.currencyCode != null) {
 				return false;
-		} else if (!currencyCode.equals(other.currencyCode))
+			}
+		} else if (!currencyCode.equals(other.currencyCode)) {
 			return false;
+		}
 		return true;
 	}
+
+	
+	
+
+	
 
 }
