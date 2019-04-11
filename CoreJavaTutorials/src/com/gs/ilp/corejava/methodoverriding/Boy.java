@@ -1,18 +1,33 @@
 package com.gs.ilp.corejava.methodoverriding;
 
-class Human {
-	public void eat() {
-		System.out.println("Human is eating");
+class Human extends Object {
+
+	public  void m1() {
+		final int i =3;
+		System.out.println(" parent m1");
 	}
+
+	public void m2() {
+		System.out.println(" parent m1");
+	}
+
 }
 
 public class Boy extends Human {
-	public void eat() {
-		System.out.println("Boy is eating");
+	public void m1() {
+		System.out.println(" child m1");
+	}
+
+	public void m3() {
+		System.out.println(" child m3");
 	}
 
 	public static void main(String args[]) {
-		Boy obj = new Boy();
-		obj.eat();
+		Human human = new Boy();
+		human.m1();
+		human.m2();
+		//shuman.m3();
+		
+
 	}
 }

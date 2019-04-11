@@ -38,11 +38,11 @@ public class FindMaxIn1DArray {
 		// start comparing from the next element if any other element from array is
 		// greater than max than thats the max.
 		for (int i = 1; i < size; i++) {
-			if (arr[i] > max) {
+			if (arr[i] < max) {
 				max = arr[i];
 			}
 		}
-		System.out.println("Max is " + max);
+		System.out.println("Min is " + max);
 		sc.close();
 
 	}
